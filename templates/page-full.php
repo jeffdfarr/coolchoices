@@ -22,8 +22,12 @@ get_header(); ?>
 					<?php
 					if( have_rows('faq') ): ?>
 						<?php while ( have_rows('faq') ) : the_row(); ?>
-							<a href="#"><?php the_sub_field('question'); ?></a>
-							<div><?php the_sub_field('answer'); ?></div>
+						<ul>
+							<li>
+								<a href="#" class="cd-faq-trigger"><?php the_sub_field('question'); ?></a>
+								<div class="cd-faq-content"><?php the_sub_field('answer'); ?></div>
+							</li>
+						</ul>
 					<?php endwhile; ?>
 
 			<?php endif; 
